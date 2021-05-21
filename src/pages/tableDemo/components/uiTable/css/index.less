@@ -1,0 +1,131 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+#uiTab {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .tab-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    .tab-item {
+      flex-shrink: 0;
+      display: block;
+      width: 1.5rem;
+      // line-height: 0.34rem;
+      color: #333 !important;
+      font-size: 0.26rem;
+      font-weight: 500;
+      padding: .1rem .2rem;
+      box-sizing: border-box;
+      position: relative;
+
+      &.sort-index {
+        width: 1rem;
+        text-align: center;
+      }
+
+      i {
+        height: 100%;
+        width: 0.2rem;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url(../images/asc.png) no-repeat right center;
+        background-size: 120%;
+
+        &.sort-down {
+          background-image: url(../images/ascdown.png);
+        }
+
+        &.sort-up {
+          background-image: url(../images/ascup.png);
+        }
+      }
+    }
+
+    .tab-left,
+    .tab-right {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .tab-left {
+      padding-right: .2rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: .2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        border: .1rem solid transparent;
+        border-right-color: #bfbfbf;
+      }
+    }
+
+    .tab-right {
+      flex: 1;
+      overflow-x: auto;
+    }
+  }
+
+  .tab-body {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+
+    .tab-item {
+      flex-shrink: 0;
+      display: block;
+      width: 1.5rem;
+      line-height: 0.34rem;
+      color: #333;
+      font-size: 0.26rem;
+      padding: .1rem .2rem;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      &.sort-index {
+        width: 1rem;
+        text-align: center;
+      }
+    }
+
+    .tab-body-content {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+
+      .tab-list-item {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .tab-left,
+      .tab-right {
+        // overflow: hidden;
+      }
+
+      .tab-left {
+        padding-right: .2rem;
+      }
+
+      .tab-right {
+        flex: 1;
+        overflow-x: auto;
+      }
+    }
+  }
+}

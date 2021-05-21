@@ -1,0 +1,201 @@
+.flex-shrink {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.content-financing {
+  padding-top: 12px;
+
+  .analysis-item {
+    padding-bottom: 20px;
+
+    .analysis-item-content {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 11px;
+
+      strong {
+        color: rgba(237, 125, 49, 1);
+        font-weight: bold;
+      }
+    }
+
+    .content-table {
+      @color: #ebf1fc;
+      border: 1px solid @color;
+      border-left: none;
+      border-right: none;
+      font-size: 11px;
+      font-weight: 400;
+      color: #111111;
+      line-height: 17px;
+
+      .table-col {
+        box-sizing: border-box;
+        padding: 3px 4px;
+        .flex-shrink();
+
+        position: relative;
+
+        &::after {
+          content: '';
+          height: 500px;
+          width: 0;
+          border-right: 1px solid #ebf1fc;
+          position: absolute;
+          right: 0;
+          top: -100px;
+        }
+
+        &:last-child {
+          &::after {
+            border: none;
+          }
+        }
+      }
+
+      // .table-col1 {
+      //   width: 124px;
+      // }
+
+      .table-col1 {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+      }
+
+      .content-table-header {
+        background: #f4f9fe;
+        overflow: hidden;
+
+        .table-col {
+          text-align: center;
+        }
+      }
+
+      .content-table-body {
+        .table-item {
+          @color: #ebf1fc;
+          border-top: 1px solid @color;
+          overflow: hidden;
+
+          &:nth-child(even) {
+            background: #fbfeff;
+          }
+        }
+
+        .table-col2 {
+          text-align: right;
+        }
+      }
+    }
+
+    .more {
+      font-size: 11px;
+      font-weight: 400;
+      color: #a6a6a6;
+      padding-top: 5px;
+
+      .iconfont {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .analysis-accounts {
+    .analysis-accounts-item {
+      width: calc(50% - 10px);
+
+      .table-title {
+        color: #6c6c6c;
+        line-height: 13px;
+        padding-bottom: 4px;
+      }
+
+      .content-table {
+        .table-col2 {
+          width: 84px;
+        }
+      }
+    }
+  }
+
+  .analysis-echarts {
+    .analysis-accounts-item {
+      width: calc(50% - 10px);
+      height: 140px;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .content-table {
+      margin-top: 11px;
+
+      .content-table-body {
+        .table-col {
+          text-align: right;
+        }
+
+        .table-col5 {
+          padding-left: 9px;
+        }
+      }
+
+      .align-center {
+        text-align: center !important;
+      }
+
+      .table-col1 {
+        width: 54px;
+        word-break: break-all;
+        .font10,
+        .font11 {
+          transform-origin: center;
+        }
+      }
+
+      .table-col2 {
+        width: 80px;
+        flex: none;
+      }
+
+      .table-col3 {
+        width: 70px;
+
+        .font10,
+        .font11 {
+          transform-origin: center;
+        }
+      }
+
+      .table-col4 {
+        width: 56px;
+      }
+
+      .table-col5 {
+        width: 74px;
+      }
+
+      .table-col6 {
+        width: 57px;
+      }
+
+      .table-col7 {
+        width: 60px;
+      }
+
+      .table-col8 {
+        width: 60px;
+      }
+    }
+  }
+}
+
+.content-nodata {
+  padding-left: 20px;
+}

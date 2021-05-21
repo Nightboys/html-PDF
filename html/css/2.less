@@ -1,0 +1,178 @@
+.flex-shrink {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.content-top {
+  padding-bottom: 13px;
+
+  .company-intro {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    color: #111;
+    line-height: 21px;
+
+    .label {
+      display: block;
+      width: 72px;
+      color: #6c6c6c;
+      white-space: nowrap;
+      .flex-shrink();
+    }
+
+    .value {
+      display: block;
+      max-width: calc(100% - 72px);
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+
+    .more {
+      font-size: 11px;
+      font-weight: 400;
+      color: #a6a6a6;
+
+      .iconfont {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.content-shareholder {
+  .content-title {
+    padding-bottom: 11px;
+  }
+
+  .content-table {
+    @color: #ebf1fc;
+    border: 1px solid @color;
+    border-left: none;
+    border-right: none;
+    font-size: 11px;
+    font-weight: 400;
+    color: #111111;
+    line-height: 17px;
+
+    .table-col {
+      box-sizing: border-box;
+      padding: 3px 4px;
+      .flex-shrink();
+    }
+
+    .table-col1 {
+      width: calc(100% - 320px);
+    }
+
+    .table-col2 {
+      width: 160px;
+    }
+
+    .table-col3 {
+      width: 160px;
+    }
+
+    .content-table-header {
+      // height: 22px;
+      // line-height: 22px;
+      background: #f4f9fe;
+
+      .table-col {
+        text-align: center;
+      }
+    }
+
+    .content-table-body {
+      .table-item {
+        @color: #ebf1fc;
+        border-top: 1px solid @color;
+        overflow: hidden;
+
+        &:nth-child(even) {
+          background: #fbfeff;
+        }
+
+        .table-col {
+          position: relative;
+
+          &::after {
+            content: '';
+            height: 500px;
+            width: 0;
+            border-right: 1px solid @color;
+            position: absolute;
+            right: 0;
+            top: -100px;
+          }
+
+          &:last-child {
+            &::after {
+              border: none;
+            }
+          }
+        }
+      }
+
+      .table-col2 {
+        text-align: right;
+      }
+
+      .table-col3 {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.content-rating {
+  padding-top: 12px;
+
+  .rating-table {
+    .rating-table-item {
+      width: 97px;
+      height: 58px;
+      font-size: 12px;
+      background: #fff9f2;
+      border: 1px solid #ffe1c0;
+      border-radius: 3px;
+      text-align: center;
+      .font11,
+      .font10 {
+        transform-origin: center;
+      }
+      p {
+        height: 30px;
+        line-height: 30px;
+        // font-weight: bold;
+      }
+
+      b {
+        color: rgba(237, 125, 49, 1);
+        font-weight: bold;
+      }
+
+      .iconfont {
+        font-weight: normal;
+      }
+
+      .icon-mima {
+        color: rgba(174, 174, 174, 0.47);
+      }
+
+      .icon-jiantou-xia {
+        color: rgba(37, 181, 90, 1);
+      }
+
+      .icon-jiantou-shang {
+        color: rgba(242, 98, 121, 1);
+      }
+    }
+  }
+
+  .rating-echart {
+    width: 100%;
+    height: 180px;
+  }
+}

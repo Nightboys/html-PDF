@@ -1,0 +1,138 @@
+@color: rgba(17, 17, 17, 1);
+
+.flex-shrink {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.body-container {
+  // background: url(./images/footer.png) no-repeat right bottom #fff;
+}
+
+.content-banner {
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 36px;
+    right: 32px;
+    z-index: 9;
+    font-size: 12px;
+    font-weight: 500;
+    color: #56749d;
+  }
+
+  img {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.content-body {
+  padding: 40px 40px 0;
+}
+
+.content-header {
+  .company-icon {
+    width: 72px;
+    height: 72px;
+    background: rgba(55, 147, 253, 1);
+    border-radius: 2px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    span {
+      display: block;
+      font-size: 22px;
+      max-width: 2em;
+      color: #ffffff;
+      line-height: 24px;
+    }
+  }
+
+  .company-title {
+    padding-left: 8px;
+    max-width: calc(100% - 72px);
+    box-sizing: border-box;
+
+    h3 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #111111;
+      line-height: 42px;
+      font-family: PingFangSC, PingFangSC-Medium;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+      // overflow: hidden;
+      padding-bottom: 10px;
+      &.climp-text {
+        font-size: 24px;
+        line-height: 30px;
+        padding-bottom: 4px;
+      }
+      &.climp-text2 {
+        font-size: 27px;
+      }
+    }
+
+    .company-title-tag {
+      span {
+        display: inline-block;
+        font-size: 12px;
+        color: #555555;
+        line-height: 20px;
+        padding: 0 8px;
+        white-space: nowrap;
+        border: 1px solid #eeeeee;
+        border-radius: 3px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.content-middle {
+  padding: 27px 0 42px;
+
+  .item-tag {
+    font-size: 12px;
+    color: #6c6c6c;
+    line-height: 21px;
+    padding: 0 20px;
+    border-left: 1px solid #e9e9e9;
+
+    &:nth-child(1) {
+      padding-left: 0;
+      border: none;
+    }
+
+    strong {
+      color: @color;
+    }
+  }
+
+  .content-middle-intro {
+    font-size: 12px;
+    color: #797979;
+    line-height: 18px;
+    padding-top: 15px;
+
+    span {
+      color: @color;
+    }
+  }
+}
+
+.content-disclaimer {
+  font-size: 12px;
+  color: #a6a6a6;
+  line-height: 18px;
+  padding-bottom: 36px;
+}

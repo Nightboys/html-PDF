@@ -1,0 +1,94 @@
+@import './mixin';
+@import '~normalize.css';
+:root {
+  font-size: 625%;
+  a,
+  button {
+    -webkit-touch-callout: none !important;
+    user-select: none !important;
+  }
+
+  // 去除按压阴影
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Arial","PingFang SC","Lantinghei SC","Helvetica Neue","Helvetica","Microsoft YaHei","微软雅黑","STHeitiSC-Light","simsun","宋体","WenQuanYi Zen Hei","WenQuanYi Micro Hei","sans-serif";
+  font-size: 0.24rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+//noinspection CssInvalidFunction
+.mobile-top-bar {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+// XS / XS Max / XR 适配
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3),
+only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3),
+only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  /*底部适配*/
+  //noinspection CssInvalidFunction
+  .mobile-bottom-bar {
+    box-sizing: border-box;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.flex-auto {
+  flex: auto;
+  height: 100%;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflowY-scroll {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.overflowY-hidden {
+  overflow-y: hidden;
+}
+
+.scroll-wrapper {
+  height: 100%;
+}
+
+.pr {
+  position: relative;
+}
+.bscroll-vertical-scrollbar {
+  width: 0.08rem !important;
+}
